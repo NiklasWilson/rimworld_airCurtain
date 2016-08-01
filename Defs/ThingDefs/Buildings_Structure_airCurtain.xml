@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+	<ThingDef Name="NW_airCurtainBuildingBase" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+	</ThingDef>
+
+	<ThingDef ParentName="NW_airCurtainBuildingBase">
+		<defName>NW_airCurtain</defName>
+		<label>Air Curtain</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<Description>A wall of air to lower temperature loss and keep out dirt/dust.</Description>
+        
+        <!-- Not sure what this is for, saw it in another mod 
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="CompProperties_Art">
+                <nameMaker>ArtName_Furniture</nameMaker>
+                <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>130</basePowerConsumption>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Glower">
+				<compClass>CompGlower</compClass>
+				<glowRadius>1</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+        </comps> -->
+    
+		<graphicData>
+			<linkFlags>
+				<li>Wall</li>
+			</linkFlags>
+            <texPath>Things/Building/airCurtain</texPath>
+            <shaderType>Transparent</shaderType>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1,1)</drawSize>
+		</graphicData>
+		<uiIconPath>Things/Building/airCurtain_ico</uiIconPath>
+        
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>1300</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>.5</Beauty>
+            <Cleanliness>5</Cleanliness>
+		</statBases>
+        
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<altitudeLayer>Building</altitudeLayer>
+		<PathCost>1</PathCost>
+		<Passability>PassThroughOnly</Passability>
+		<fillPercent>1</fillPercent>
+		<Size>1,1</Size>
+		<tickerType>Normal</tickerType>
+        
+		<rotatable>true</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<designationCategory>Structure</designationCategory>
+		<blockLight>false</blockLight>
+        
+        <building>
+            <isInert>true</isInert>
+            <ignoreNeedsPower>true</ignoreNeedsPower>
+        </building>
+        
+    	<costList>
+     		<Component>5</Component>
+     		<Steel>70</Steel>
+        </costList>
+
+	</ThingDef>
+
+</Buildings>

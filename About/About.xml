@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>NW Air Curtain</name>
+	<author>WNik</author>
+	<url>https://wwww.niklaswilson.net</url>
+	<targetVersion>0.14.1249</targetVersion>
+	<description>
+        "An air door or air curtain is a device used to prevent air or contaminants from moving from one open space to another. The most common use is a downward-facing blower fan mounted over an entrance to a building, or an opening between two spaces conditioned at different temperatures." --wikipedia
+    </description>
+</ModMetaData>
